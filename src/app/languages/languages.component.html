@@ -1,0 +1,9 @@
+<tr *ngFor="let item of languages">
+  <td>
+    <ul>
+      <li *ngFor="let interest of item.languages || []">
+        {{ interest }}
+      </li>
+    </ul>
+  </td>
+</tr>
