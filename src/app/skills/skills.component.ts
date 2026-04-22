@@ -11,16 +11,21 @@ import { map } from 'rxjs';
 export class SkillsComponent {
   skillsList: skills[] = [];
 
+  private widths = ['100%', '82%', '95%', '78%', '88%', '65%', '90%', '72%', '85%', '92%'];
+
   constructor(public SkillsService: SkillsService) {
-    console.log(this.SkillsService.accesoSkills);
     this.SkillsService.getSkills().snapshotChanges().pipe(
       map(changes =>
         changes.map(c =>
-          ({ id: c.payload.doc.id, ...c.payload.doc.data()  })
+          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
         )
       )
     ).subscribe(data => {
       this.skillsList = data;
     });
+  }
+
+  getBarWidth(index: number): string {
+    return this.widths[index % this.widths.length];
   }
 }

@@ -1,0 +1,58 @@
+.section { margin-bottom: 22px; }
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.skills-scale {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+  margin-bottom: 4px;
+  padding-left: 130px;
+}
+
+.scale-tick {
+  flex: 1;
+  text-align: right;
+  font-size: 9px;
+  color: var(--gray);
+  border-left: 1px solid var(--border);
+  height: 6px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 8px;
+}
+
+.skill-label {
+  width: 130px; /* un poco más de espacio */
+  font-size: 12px; /* antes 11px */
+  color: var(--text);
+  text-align: right;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.skill-bar-wrap {
+  flex: 1;
+  height: 14px;
+  background: var(--emerald-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 100%;
+  background: var(--emerald);
+  transition: width 0.6s ease;
+}

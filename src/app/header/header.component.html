@@ -1,18 +1,41 @@
-<table>
-  <tr>
-    <td>
-      {{header.name}} <br>
-      {{header.goalLife}}
-    </td>
-    <td>
-      <img [src]="header.photoURL" width="200" height="200" (error)="header.photoURL = 'https://previews.123rf.com/images/boxerx/boxerx1611/boxerx161100006/68882648-download-sign-on-white-background-load-icon-data-loading-bar-vector-stock-illustration.jpg'">
-    </td>
-    <td>
-      {{header.email}} <br>
-      {{header.phoneNumber}}<br>
-      {{header.location}}<br>
-      {{header.socialNetwork}}<br>
-    </td>
-   
-  </tr>
-</table>
+<div class="header-wrapper">
+
+  <div class="header-left">
+    <div class="header-name-block">
+      <div class="header-accent-bar"></div>
+      <div>
+        <h1 class="header-name">{{ header.name }}</h1>
+        <p class="header-goal">{{ header.goalLife }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-photo-wrap">
+    <img
+      class="header-photo"
+      [src]="header.photoURL"
+      alt="Profile photo"
+      (error)="header.photoURL = 'https://ui-avatars.com/api/?name=' + header.name + '&background=10b981&color=fff&size=200'"
+    />
+  </div>
+
+  <div class="header-contact">
+    <div class="contact-item">
+      <span class="contact-value">{{ header.email }}</span>
+      <span class="contact-icon email-icon"></span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-value">{{ header.phoneNumber }}</span>
+      <span class="contact-icon phone-icon"></span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-value">{{ header.location }}</span>
+      <span class="contact-icon loc-icon"></span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-value">{{ header.socialNetwork }}</span>
+      <span class="contact-icon social-icon"></span>
+    </div>
+  </div>
+
+</div>

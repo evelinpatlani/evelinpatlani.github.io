@@ -1,0 +1,26 @@
+.section { margin-bottom: 22px; }
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.interest-tag {
+  background: var(--emerald-light);
+  color: var(--emerald-dark);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-left: 3px solid var(--emerald);
+}

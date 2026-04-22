@@ -1,0 +1,95 @@
+.section {
+  margin-bottom: 22px;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.job-entry {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.job-marker {
+  width: 14px;
+  height: 14px;
+  background: var(--emerald);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.job-content { flex: 1; }
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.job-dates {
+  font-size: 12px; /* antes 10.5px */
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.job-location {
+  font-size: 12px; /* antes 10.5px */
+  color: var(--emerald-dark);
+  font-weight: 600;
+}
+
+.job-position {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px; /* antes 13px */
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 1px;
+}
+
+.job-company {
+  font-size: 13px; /* antes 12px */
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.job-accomplishments-label {
+  font-size: 11px; /* antes 10px */
+  font-weight: 700;
+  color: var(--emerald-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.job-accomplishments {
+  list-style: none;
+  padding: 0;
+}
+
+.job-accomplishments li {
+  font-size: 12px; /* antes 11px */
+  color: var(--gray);
+  padding-left: 10px;
+  position: relative;
+  margin-bottom: 2px;
+  line-height: 1.5;
+}
+
+.job-accomplishments li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 5px;
+  height: 1px;
+  background: var(--emerald);
+}
