@@ -1,0 +1,31 @@
+.cv-wrapper {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.cv-divider {
+  height: 3px;
+  background: linear-gradient(90deg, var(--emerald-dark) 0%, var(--emerald-accent) 100%);
+  margin: 0 24px;
+}
+
+.cv-body {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 0;
+  padding: 20px 24px 24px;
+  align-items: start;
+}
+
+.cv-col-left {
+  padding-right: 28px;
+  border-right: 1px solid var(--border);
+}
+
+.cv-col-right {
+  padding-left: 24px;
+}

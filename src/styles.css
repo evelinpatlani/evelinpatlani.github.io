@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --emerald: #10b981;
+  --emerald-dark: #059669;
+  --emerald-light: #d1fae5;
+  --emerald-accent: #34d399;
+  --dark: #111827;
+  --dark-2: #1f2937;
+  --gray: #6b7280;
+  --gray-light: #f3f4f6;
+  --white: #ffffff;
+  --border: #e5e7eb;
+  --text: #374151;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 13px;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.5;
+}
+
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cv-wrapper { box-shadow: none; }
+}
