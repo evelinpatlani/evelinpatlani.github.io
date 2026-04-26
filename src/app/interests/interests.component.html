@@ -1,8 +1,9 @@
 <div class="section">
   <h2 class="section-title">Interests</h2>
+
   <div class="interests-list">
     <div *ngFor="let item of interests">
-      <span class="interest-tag" *ngFor="let interest of item.interests || []">
+      <span class="interest-tag" *ngFor="let interest of item.interests">
         {{ interest }}
       </span>
     </div>
