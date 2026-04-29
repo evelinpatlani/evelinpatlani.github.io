@@ -1,10 +1,10 @@
 <div class="section">
   <h2 class="section-title">Education</h2>
 
-  <div class="edu-entry" *ngFor="let item of education.education">
+  <div class="edu-entry" *ngFor="let item of educationList">
     <div class="edu-marker"></div>
     <div class="edu-content">
-      <p class="edu-text">{{ item }}</p>
+      <p class="edu-text">{{ item.education }}</p>
     </div>
   </div>
 </div>

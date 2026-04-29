@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+name: Angular_DockerImage2
+=======
 name: Angular_DockerImage_v2
+>>>>>>> 06005305e2a4986b2ad0693e32e43b85bdd54f5e
 
 on:
   push:
@@ -16,7 +20,11 @@ jobs:
         with:
           node-version: 20.x
       - name: npm install
+<<<<<<< HEAD
+        run: npm ci  
+=======
         run: npm ci
+>>>>>>> 06005305e2a4986b2ad0693e32e43b85bdd54f5e
       - name: test
         run: |
           npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
