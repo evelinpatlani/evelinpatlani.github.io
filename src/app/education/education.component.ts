@@ -9,18 +9,12 @@ import { map } from 'rxjs/operators';
   styleUrl: './education.component.css'
 })
 export class EducationComponent {
-  education: education = new education();
-  constructor(public educationService: EducationService) {
-    console.log(this.educationService);
-    this.educationService.getEducation().snapshotChanges().pipe(
-      map(changes =>
-        changes.map(c =>
-          ({ id: c.payload.doc.id, ...c.payload.doc.data() })
-        )
-      )
-    ).subscribe(data => {
-      this.education = data[0];
-      console.log(data);
+  education: string[] = [];
+
+  constructor(private educationService: EducationService) {
+    this.educationService.getEducation().subscribe((edu: string[]) => {
+      this.education = edu;
     });
   }
+
 }

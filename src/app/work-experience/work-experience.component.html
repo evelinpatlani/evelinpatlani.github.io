@@ -11,7 +11,7 @@
      <div class="job-position">{{ job.position }}</div>
 <div class="job-company">{{ job.company }}</div>
 <ul class="job-accomplishments">
-  <li *ngFor="let item of (job.accomplishments || '').split(',')">{{ item.trim() }}</li>
+  <li *ngFor="let item of job.accomplishments">{{ item }}</li>
 </ul>
   </div>
 </div>

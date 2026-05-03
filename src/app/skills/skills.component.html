@@ -8,12 +8,10 @@
     <span class="scale-tick"></span>
   </div>
 
-  <div *ngFor="let item of skillsList">
-    <div class="skill-row" *ngFor="let skill of item.skills1; let i = index">
-      <span class="skill-label">{{ skill }}</span>
-      <div class="skill-bar-wrap">
-        <div class="skill-bar" [style.width]="getBarWidth(i)"></div>
-      </div>
+  <div class="skill-row" *ngFor="let skill of skills">
+    <span class="skill-label">{{ skill.name }}</span>
+    <div class="skill-bar-wrap">
+      <div class="skill-bar" [style.width]="skill.level + '%'"></div>
     </div>
   </div>
 </div>

@@ -5,5 +5,5 @@ export class WorkExperience {
  location?: string = 'city, country';
  position?: string = 'position';
  company?: string = 'company'
- accomplishments?: string = 'item1,, item2, item3';
+ accomplishments?: string[] = [];
 }

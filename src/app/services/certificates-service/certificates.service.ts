@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { certificates } from '../../models/certificates/certificates.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,9 @@ export class CertificatesService {
     this.certificatesRef = db.collection(this.dbPath);
    }
 
-   getCertificates(): AngularFirestoreCollection<certificates> {
-    return this.certificatesRef;
+   getCertificates() {
+    return this.db.collection('certificates').valueChanges().pipe(
+      map((docs: any[]) => docs[0]?.certificates || [])
+    );
    }
 }
