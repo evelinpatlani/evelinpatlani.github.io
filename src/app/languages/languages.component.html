@@ -1,8 +1,9 @@
 <div class="section">
   <h2 class="section-title">Languages</h2>
 
-  <div class="lang-row" *ngFor="let item of languages">
+  <!-- Sin el *ngFor exterior, directo al array -->
+  <div class="lang-row" *ngFor="let lang of languages">
     <span class="lang-dot"></span>
-    <span class="lang-name">{{ item.languages }}</span>
+    <span class="lang-name">{{ lang }}</span>
   </div>
 </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { interests } from '../../models/interests/interests.model';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({
@@ -16,7 +17,9 @@ export class InterestsService {
     this.interestsRef = db.collection(this.dbPath);
    }
 
-   getInterests(): AngularFirestoreCollection<interests> {
-    return this.interestsRef;
-   }
+   getInterests() {
+      return this.db.collection('interests').valueChanges().pipe(
+        map((docs: any[]) => docs[0]?.interests || [])
+      );
+    }
 }

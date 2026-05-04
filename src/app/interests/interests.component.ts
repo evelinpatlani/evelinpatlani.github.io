@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { InterestsService } from '../services/interests-service/interests.service';
-import { interests } from '../models/interests/interests.model';
-import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-interests',
@@ -10,17 +9,11 @@ import { map } from 'rxjs/operators';
 })
 
 export class InterestsComponent {
-  interests: interests[] = [];
+  interests: string[] = [];
   
-  constructor(public interestsService: InterestsService) {
-    console.log(this.interestsService);
-      this.interestsService.getInterests().snapshotChanges().pipe(
-        map(changes =>
-          changes.map(c => ({ id: c.payload.doc.id, ...c.payload.doc.data()  }))
-        )
-      ).subscribe(data => {
-        this.interests = data;
-        console.log(this.interests);
+   constructor(private interestsService: InterestsService) {
+      this.interestsService.getInterests().subscribe((langs: string[]) => {
+        this.interests = langs;
       });
-  }
+    }
 }
