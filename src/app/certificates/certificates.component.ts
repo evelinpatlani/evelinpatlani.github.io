@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CertificatesService } from '../services/certificates-service/certificates.service';  
 
-
 @Component({
   selector: 'app-certificates',
   templateUrl: './certificates.component.html',
@@ -10,10 +9,9 @@ import { CertificatesService } from '../services/certificates-service/certificat
 export class CertificatesComponent {
   certificates: string[] = [];
   
-    constructor(private certificatesService: CertificatesService) {
-      this.certificatesService.getCertificates().subscribe((langs:string[]) => {
-        this.certificates = langs;
-      });
-    }
+  constructor(private certificatesService: CertificatesService) {
+    this.certificatesService.getCertificates().subscribe((langs: string[]) => {
+      this.certificates = langs;
+    });
+  }
 }
-
